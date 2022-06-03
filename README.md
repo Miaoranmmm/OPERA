@@ -1,16 +1,7 @@
-- datasets/: contains multiwoz_qa dataset
+# OPERA:  Harmonizing Task-Oriented Dialogs and Information Seeking Experience
 
-- query_generator/ is for training and evaluating query generator
+- data/: contains OBMultiWOZ dataset
 
-- readers/: for training and evaluating reader model.
-   subfolders:
-	- t5/
-	- fid/
-	- rag/
+- training/: files for training models
 
-- end2end_train/: training and evaluating end2end models with t5/rag reader
-
-- end2end_eval/ is for:
-	- end2end evaluation for end2end/modular models
-	- calculating knowledge f1, parent score and entailment score
-# MultiwozQA
+- evaluation/: files for testing and evaluation 
