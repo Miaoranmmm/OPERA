@@ -1,7 +1,10 @@
 # OPERA:  Harmonizing Task-Oriented Dialogs and Information Seeking Experience
 
-- data/: contains OBMultiWOZ dataset
+This repository is for the paper [OPERA:  Harmonizing Task-Oriented Dialogs and Information Seeking Experience] (https://dl.acm.org/doi/abs/10.1145/3623381).
 
-- training/: files for training models
+This repository is based on hugginface transformer and OpenAI GPT-3. Some evaluation scripts and dataset are adapted from DSTC9.
 
-- evaluation/: files for testing and evaluation 
+
+- OBMultiWOZ/: the constructed OBMultiWOZ dataset
+
+- training/: the files for training models
