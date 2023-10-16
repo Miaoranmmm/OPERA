@@ -48,11 +48,8 @@ class TaskConfig(datasets.BuilderConfig):
         self.description = description
 
 
-    
-
-
-class mmultiwoz(datasets.GeneratorBasedBuilder):
-    """mmultiwoz"""
+class obmultiwoz(datasets.GeneratorBasedBuilder):
+    """obmultiwoz"""
 
     BUILDER_CONFIGS = [
                         TaskConfig(name='taskbot',
@@ -111,23 +108,7 @@ class mmultiwoz(datasets.GeneratorBasedBuilder):
             validation_path = [os.path.join(current_dir, 'multiwoz_val_from_dstc9_plus_ans_turns.jsonl'),
                     os.path.join(current_dir,'multiwoz_val_from_dstc9_plus_unans_turns_gpt_response.jsonl')]
             test_path = [os.path.join(current_dir, 'multiwoz_test_from_dstc9_unans_turns.jsonl')]
-        # elif self.config.task == 'taskbot_qa':
-        #     train_path = [os.path.join(current_dir, 'multiwoz_train_from_dstc9_plus_ans_turns.jsonl')]
-        #     validation_path = [os.path.join(current_dir, 'multiwoz_val_from_dstc9_plus_ans_turns.jsonl')]
-        #     test_path = [os.path.join(current_dir, 'multiwoz_test_from_dstc9_qa_turns.jsonl')]
-        # elif self.config.task == 'taskbot_qa_unans_k':
-        #     train_path = [
-        #             os.path.join(current_dir, 'multiwoz_train_from_dstc9_plus_unans_turns_gpt_knowledge.jsonl')]
-        #     validation_path = [
-        #             os.path.join(current_dir,'multiwoz_val_from_dstc9_plus_unans_turns_gpt_knowledge.jsonl')]
-        #     test_path = [os.path.join(current_dir, 'multiwoz_test_from_dstc9_unans_turns.jsonl')]
-        # else:
-        #     train_path = [
-        #             os.path.join(current_dir, 'multiwoz_train_from_dstc9_plus_unans_turns_gpt_response.jsonl')]
-        #     validation_path = [
-        #             os.path.join(current_dir,'multiwoz_val_from_dstc9_plus_unans_turns_gpt_response.jsonl')]
-        #     test_path = [os.path.join(current_dir, 'multiwoz_test_from_dstc9_unans_turns.jsonl')]
-        
+                
         return [
             datasets.SplitGenerator(name=datasets.Split.TRAIN, gen_kwargs={"filepath": train_path}),
             datasets.SplitGenerator(name=datasets.Split.VALIDATION, gen_kwargs={"filepath": validation_path}),
